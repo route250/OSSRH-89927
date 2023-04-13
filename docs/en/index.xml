@@ -2,18 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>StockBag</title>
-        <link>http://www.eonet.ne.jp/~straycat/en/</link>
+        <link>https://route250.github.io/en/</link>
         <description>Recent content on StockBag</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>ja-jp</language>
-        <lastBuildDate>Tue, 11 Apr 2023 06:49:54 +0900</lastBuildDate><atom:link href="http://www.eonet.ne.jp/~straycat/en/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>testsample</title>
-        <link>http://www.eonet.ne.jp/~straycat/en/p/testsample/</link>
-        <pubDate>Tue, 11 Apr 2023 06:49:54 +0900</pubDate>
-        
-        <guid>http://www.eonet.ne.jp/~straycat/en/p/testsample/</guid>
-        <description></description>
-        </item>
-        
+        <language>ja-jp</language><atom:link href="https://route250.github.io/en/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
