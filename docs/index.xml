@@ -6,7 +6,40 @@
         <description>Recent content on ストックバック</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja-jp</language>
-        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://route250.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 14 Apr 2023 23:30:14 +0900</lastBuildDate><atom:link href="https://route250.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>lsコマンドの使い方</title>
+        <link>https://route250.github.io/p/ls%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/</link>
+        <pubDate>Fri, 14 Apr 2023 23:30:14 +0900</pubDate>
+        
+        <guid>https://route250.github.io/p/ls%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/</guid>
+        <description>&lt;p&gt;#lsコマンド
+##説明
+lsコマンドは、Linux/Unixシステムでファイルやディレクトリのリストを表示するために使用されるコマンドです。&lt;/p&gt;
+&lt;p&gt;##コマンドラインからの使い方の例
+-カレントディレクトリのファイル一覧を表示する
+&lt;code&gt;ls&lt;/code&gt;
+-ディレクトリ名を指定してそのディレクトリ内のファイル一覧を表示する
+&lt;code&gt;ls ディレクトリ名&lt;/code&gt;
+-ファイルの日時、所有者、権限などを含めて詳細なリストを表示する
+&lt;code&gt;ls -l&lt;/code&gt;
+-非表示ファイルも含めてすべてのファイルを表示する
+&lt;code&gt;ls -a&lt;/code&gt;
+ファイル名の先頭が&amp;rsquo;.&amp;rsquo;(小数点)のファイルは、通常非表示となりますが、&amp;rsquo;-a&amp;rsquo;オプションを使用することで表示されます。&lt;/p&gt;
+&lt;p&gt;-サブディレクトリ内のファイルも含めて表示する
+&lt;code&gt;ls -R&lt;/code&gt;
+-ファイルの更新日時が新しい順に表示する
+&lt;code&gt;ls -t&lt;/code&gt;
+-ファイルサイズを人間が読みやすい形式で表示する
+&lt;code&gt;ls -h&lt;/code&gt;
+-ファイルサイズが大きい順に表示する
+&lt;code&gt;ls -S&lt;/code&gt;
+##スクリプトからの使い方の例
+-ディレクトリ内のファイル名でループするスクリプト例
+&lt;code&gt;for file in $(ls ディレクトリ名); do echo &amp;quot;ファイル名:$file&amp;quot; done&lt;/code&gt;
+注意点として、スペースや特殊文字が含まれるファイル名には対応していないため、そのような場合はls -Qを使ってエスケープされたファイル名を表示する必要があります。また、バッククオート(`)ではなく、$( )を使用した方がよいとされています。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Chinese Test</title>
         <link>https://route250.github.io/p/test-chinese/</link>
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
