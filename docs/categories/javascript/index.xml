@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>javascript on ストックバック</title>
+        <link>https://route250.github.io/categories/javascript/</link>
+        <description>Recent content in javascript on ストックバック</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja-jp</language>
+        <lastBuildDate>Fri, 21 Apr 2023 02:04:28 +0900</lastBuildDate><atom:link href="https://route250.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>比較演算子の == と === は何が違う？</title>
+        <link>https://route250.github.io/p/%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%AE-%E3%81%A8-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/</link>
+        <pubDate>Fri, 21 Apr 2023 02:04:28 +0900</pubDate>
+        
+        <guid>https://route250.github.io/p/%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%AE-%E3%81%A8-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/</guid>
+        <description>&lt;p&gt;JavaScriptにおいて、比較演算子には== と === の2つがあります。これらの演算子は、異なる型の値を比較する際に異なる振る舞いをします。&lt;/p&gt;
+&lt;p&gt;== 比較演算子は、比較する値の型が異なる場合に、自動的に型変換を行ってから値を比較します。例えば、1 == &amp;lsquo;1&amp;rsquo; のように数値と文字列を比較する場合、文字列の &amp;lsquo;1&amp;rsquo; を数値 1 に変換してから比較します。そのため、この場合 true が返されます。&lt;/p&gt;
+&lt;p&gt;しかし、== 比較演算子は型変換によって予期せぬ挙動が生じる可能性があるため、使用には注意が必要です。例えば、0 == false のような比較では、false が数値 0 に変換されてから比較されるため、true が返されます。これは予期せぬ結果であるため、=== 比較演算子を使用することが推奨されます。&lt;/p&gt;
+&lt;p&gt;=== 比較演算子は、比較する値の型が異なる場合でも、型変換を行いません。そのため、1 === &amp;lsquo;1&amp;rsquo; のような比較では、型が異なるために false が返されます。=== 比較演算子は、型が一致する場合に限り値を比較するため、より厳密な比較が可能です。&lt;/p&gt;
+&lt;p&gt;一般的には、可能な限り === 比較演算子を使用することが推奨されます。ただし、== 比較演算子を使用する必要がある場合は、その挙動を理解してから使用するようにしましょう。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
