@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://route250.github.io/</loc>
-    <lastmod>2023-04-21T02:04:28+09:00</lastmod>
+    <lastmod>2023-04-21T02:12:20+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://route250.github.io/categories/</loc>
-    <lastmod>2023-04-21T02:04:28+09:00</lastmod>
+    <lastmod>2023-04-21T02:12:20+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -29,10 +29,13 @@
                 />
   </url><url>
     <loc>https://route250.github.io/categories/javascript/</loc>
-    <lastmod>2023-04-21T02:04:28+09:00</lastmod>
+    <lastmod>2023-04-21T02:12:20+09:00</lastmod>
+  </url><url>
+    <loc>https://route250.github.io/p/let-%E3%81%A8-var-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/</loc>
+    <lastmod>2023-04-21T02:12:20+09:00</lastmod>
   </url><url>
     <loc>https://route250.github.io/post/</loc>
-    <lastmod>2023-04-21T02:04:28+09:00</lastmod>
+    <lastmod>2023-04-21T02:12:20+09:00</lastmod>
   </url><url>
     <loc>https://route250.github.io/p/%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%AE-%E3%81%A8-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/</loc>
     <lastmod>2023-04-21T02:04:28+09:00</lastmod>

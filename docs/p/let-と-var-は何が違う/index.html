@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja-jp" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='lsコマンド 説明 lsコマンドは、Linux/Unixシステムでファイルやディレクトリのリストを表示するために使用されるコマンドです。 コマンド'>
-<title>lsコマンドの使い方</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='JavaScriptで変数を宣言する方法には、letとvarがあります。これらはどちらも変数を宣言するためのキーワードですが、実は大きな違い'>
+<title>let と var は何が違う？</title>
 
-<link rel='canonical' href='https://route250.github.io/p/ls%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/'>
+<link rel='canonical' href='https://route250.github.io/p/let-%E3%81%A8-var-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/'>
 
-<link rel="stylesheet" href="https://route250.github.io/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='lsコマンドの使い方'>
-<meta property='og:description' content='lsコマンド 説明 lsコマンドは、Linux/Unixシステムでファイルやディレクトリのリストを表示するために使用されるコマンドです。 コマンド'>
-<meta property='og:url' content='https://route250.github.io/p/ls%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/'>
+<link rel="stylesheet" href="https://route250.github.io/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='let と var は何が違う？'>
+<meta property='og:description' content='JavaScriptで変数を宣言する方法には、letとvarがあります。これらはどちらも変数を宣言するためのキーワードですが、実は大きな違い'>
+<meta property='og:url' content='https://route250.github.io/p/let-%E3%81%A8-var-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/'>
 <meta property='og:site_name' content='ストックバック'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='command' /><meta property='article:tag' content='ls' /><meta property='article:published_time' content='2023-04-14T23:30:14&#43;09:00'/><meta property='article:modified_time' content='2023-04-14T23:30:14&#43;09:00'/>
-<meta name="twitter:title" content="lsコマンドの使い方">
-<meta name="twitter:description" content="lsコマンド 説明 lsコマンドは、Linux/Unixシステムでファイルやディレクトリのリストを表示するために使用されるコマンドです。 コマンド">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2023-04-21T02:12:20&#43;09:00'/><meta property='article:modified_time' content='2023-04-21T02:12:20&#43;09:00'/>
+<meta name="twitter:title" content="let と var は何が違う？">
+<meta name="twitter:description" content="JavaScriptで変数を宣言する方法には、letとvarがあります。これらはどちらも変数を宣言するためのキーワードですが、実は大きな違い">
       
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRE1R3E9XM"></script>
 <script>
@@ -269,40 +269,7 @@ if (!doNotTrack) {
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目次</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#説明">説明</a></li>
-    <li><a href="#コマンドラインからの使い方の例">コマンドラインからの使い方の例</a></li>
-    <li><a href="#スクリプトからの使い方の例">スクリプトからの使い方の例</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
     <article class="main-article">
@@ -312,8 +279,8 @@ if (!doNotTrack) {
     
     <header class="article-category">
         
-            <a href="https://route250.github.io/categories/linux/" >
-                linux
+            <a href="https://route250.github.io/categories/javascript/" >
+                javascript
             </a>
         
     </header>
@@ -321,7 +288,7 @@ if (!doNotTrack) {
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="https://route250.github.io/p/ls%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/">lsコマンドの使い方</a>
+            <a href="https://route250.github.io/p/let-%E3%81%A8-var-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/">let と var は何が違う？</a>
         </h2>
     
         
@@ -343,7 +310,7 @@ if (!doNotTrack) {
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 14, 2023</time>
+                <time class="article-time--published">Apr 21, 2023</time>
             </div>
         
 
@@ -373,54 +340,29 @@ if (!doNotTrack) {
     <section class="article-content">
     
     
-    <h1 id="lsコマンド">lsコマンド</h1>
-<h2 id="説明">説明</h2>
-<pre><code>lsコマンドは、Linux/Unixシステムでファイルやディレクトリのリストを表示するために使用されるコマンドです。
-</code></pre>
-<h2 id="コマンドラインからの使い方の例">コマンドラインからの使い方の例</h2>
-<ul>
-<li>
-<p>カレントディレクトリのファイル一覧を表示する</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls
-</span></span></code></pre></div></li>
-<li>
-<p>ディレクトリ名を指定してそのディレクトリ内のファイル一覧を表示する</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ls ディレクトリ名
-</span></span></code></pre></div></li>
-<li>
-<p>ファイルの日時、所有者、権限などを含めて詳細なリストを表示する</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ls -l
-</span></span></code></pre></div></li>
-<li>
-<p>非表示ファイルも含めてすべてのファイルを表示する</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ls -a
-</span></span></code></pre></div><p>ファイル名の先頭が&rsquo;.&rsquo;(小数点)のファイルは、通常非表示となりますが、&rsquo;-a&rsquo;オプションを使用することで表示されます。</p>
-</li>
-<li>
-<p>サブディレクトリ内のファイルも含めて表示する</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ls -R
-</span></span></code></pre></div></li>
-<li>
-<p>ファイルの更新日時が新しい順に表示する</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ls -t
-</span></span></code></pre></div></li>
-<li>
-<p>ファイルサイズを人間が読みやすい形式で表示する</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ls -h
-</span></span></code></pre></div></li>
-<li>
-<p>ファイルサイズが大きい順に表示する</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ls -S
-</span></span></code></pre></div></li>
-</ul>
-<h2 id="スクリプトからの使い方の例">スクリプトからの使い方の例</h2>
-<ul>
-<li>ディレクトリ内のファイル名でループするスクリプト例
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> file in <span class="k">$(</span>ls ディレクトリ名<span class="k">)</span><span class="p">;</span> <span class="k">do</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;ファイル名:</span><span class="nv">$file</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="k">done</span>
-</span></span></code></pre></div>注意点として、スペースや特殊文字が含まれるファイル名には対応していないため、そのような場合はls -Qを使ってエスケープされたファイル名を表示する必要があります。また、バッククオート(`)ではなく、$( )を使用した方がよいとされています。</li>
-</ul>
+    <p>JavaScriptで変数を宣言する方法には、letとvarがあります。これらはどちらも変数を宣言するためのキーワードですが、実は大きな違いがあります。この記事では、letとvarの違いについて解説します。</p>
+<p>まず、varは関数スコープであるのに対して、letはブロックスコープです。関数スコープとは、変数を宣言した関数内で有効であるということです。一方、ブロックスコープとは、変数を宣言したブロック（中括弧で囲まれた範囲）内でのみ有効であるということです。つまり、letで宣言した変数は、そのブロック内でしか使えないということです。</p>
+<p>以下の例を見てみましょう。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">example</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 2が出力される
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 2が出力される
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>この場合、xはvarを使って宣言されています。ifブロックの内側で再度宣言されているため、console.log(x)の出力は2となります。そして、ifブロックの外側でもconsole.log(x)が呼ばれているため、再度2が出力されます。</p>
+<p>一方、letを使った場合はどうでしょうか。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">example</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 2が出力される
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 1が出力される
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>この場合、ifブロック内で宣言されたxは別の変数として扱われます。そのため、最初のconsole.log(x)の出力は2となりますが、ifブロックの外側のxは異なる変数であり、値は1となります。</p>
+<p>以上のように、letとvarの違いはスコープの扱い方にあります。可能であればletを使い、varを使う必要がある場合は注意深くスコープを考えて使うようにしましょう。</p>
 
 </section>
 
@@ -428,10 +370,6 @@ if (!doNotTrack) {
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="https://route250.github.io/tags/command/">command</a>
-        
-            <a href="https://route250.github.io/tags/ls/">ls</a>
         
     </section>
 
@@ -465,12 +403,12 @@ if (!doNotTrack) {
             
                 
 <article class="">
-    <a href="https://route250.github.io/p/let-%E3%81%A8-var-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/">
+    <a href="https://route250.github.io/p/%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%AE-%E3%81%A8-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">let と var は何が違う？</h2>
+            <h2 class="article-title">比較演算子の == と === は何が違う？</h2>
         </div>
     </a>
 </article>
@@ -478,12 +416,12 @@ if (!doNotTrack) {
             
                 
 <article class="">
-    <a href="https://route250.github.io/p/%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%AE-%E3%81%A8-%E3%81%AF%E4%BD%95%E3%81%8C%E9%81%95%E3%81%86/">
+    <a href="https://route250.github.io/p/ls%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">比較演算子の == と === は何が違う？</h2>
+            <h2 class="article-title">lsコマンドの使い方</h2>
         </div>
     </a>
 </article>
