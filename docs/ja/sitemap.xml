@@ -15,10 +15,45 @@
                 href="https://route250.github.io/"
                 />
   </url><url>
+    <loc>https://route250.github.io/categories/</loc>
+    <lastmod>2023-04-14T23:30:14+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://route250.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://route250.github.io/categories/"
+                />
+  </url><url>
+    <loc>https://route250.github.io/categories/linux/</loc>
+    <lastmod>2023-04-14T23:30:14+09:00</lastmod>
+  </url><url>
+    <loc>https://route250.github.io/tags/ls/</loc>
+    <lastmod>2023-04-14T23:30:14+09:00</lastmod>
+  </url><url>
     <loc>https://route250.github.io/p/ls%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9/</loc>
     <lastmod>2023-04-14T23:30:14+09:00</lastmod>
   </url><url>
     <loc>https://route250.github.io/post/</loc>
+    <lastmod>2023-04-14T23:30:14+09:00</lastmod>
+  </url><url>
+    <loc>https://route250.github.io/tags/</loc>
+    <lastmod>2023-04-14T23:30:14+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://route250.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://route250.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://route250.github.io/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</loc>
     <lastmod>2023-04-14T23:30:14+09:00</lastmod>
   </url><url>
     <loc>https://route250.github.io/p/%E3%83%86%E3%82%B9%E3%83%88%E6%8A%95%E7%A8%BF/</loc>
@@ -33,33 +68,9 @@
     <loc>https://route250.github.io/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://route250.github.io/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://route250.github.io/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://route250.github.io/categories/"
-                />
-  </url><url>
     <loc>https://route250.github.io/links/</loc>
   </url><url>
     <loc>https://route250.github.io/search/</loc>
-  </url><url>
-    <loc>https://route250.github.io/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://route250.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://route250.github.io/tags/"
-                />
   </url><url>
     <loc>https://route250.github.io/categories/test/</loc>
   </url>

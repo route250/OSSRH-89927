@@ -5,6 +5,23 @@
         <link>https://route250.github.io/tags/</link>
         <description>Recent content in Tags on ストックバック</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>ja-jp</language><atom:link href="https://route250.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <language>ja-jp</language>
+        <lastBuildDate>Fri, 14 Apr 2023 23:30:14 +0900</lastBuildDate><atom:link href="https://route250.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ls</title>
+        <link>https://route250.github.io/tags/ls/</link>
+        <pubDate>Fri, 14 Apr 2023 23:30:14 +0900</pubDate>
+        
+        <guid>https://route250.github.io/tags/ls/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>コマンド</title>
+        <link>https://route250.github.io/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</link>
+        <pubDate>Fri, 14 Apr 2023 23:30:14 +0900</pubDate>
+        
+        <guid>https://route250.github.io/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>
