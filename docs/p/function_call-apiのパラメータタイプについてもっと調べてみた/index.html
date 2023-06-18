@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='OpenAIのAPIで、fucntion_callが発表されました。 英語が苦手なのでドキュメントを読んでも手探り状態です。 一番悩んだのがfu'>
-<title>function_call APIのパラメータタイプについて調べてみた</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='OpenAIのAI、function_callのパラメータについて、もうちょっと調べてみました。 試してみた結果、type以外の細かいことは、'>
+<title>function_call APIのパラメータタイプについて、もっと調べてみた</title>
 
-<link rel='canonical' href='https://route250.github.io/p/function_call-api%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%BF%E3%81%B9%E3%81%A6%E3%81%BF%E3%81%9F/'>
+<link rel='canonical' href='https://route250.github.io/p/function_call-api%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%82%82%E3%81%A3%E3%81%A8%E8%AA%BF%E3%81%B9%E3%81%A6%E3%81%BF%E3%81%9F/'>
 
-<link rel="stylesheet" href="https://route250.github.io/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='function_call APIのパラメータタイプについて調べてみた'>
-<meta property='og:description' content='OpenAIのAPIで、fucntion_callが発表されました。 英語が苦手なのでドキュメントを読んでも手探り状態です。 一番悩んだのがfu'>
-<meta property='og:url' content='https://route250.github.io/p/function_call-api%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%BF%E3%81%B9%E3%81%A6%E3%81%BF%E3%81%9F/'>
+<link rel="stylesheet" href="https://route250.github.io/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='function_call APIのパラメータタイプについて、もっと調べてみた'>
+<meta property='og:description' content='OpenAIのAI、function_callのパラメータについて、もうちょっと調べてみました。 試してみた結果、type以外の細かいことは、'>
+<meta property='og:url' content='https://route250.github.io/p/function_call-api%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%82%82%E3%81%A3%E3%81%A8%E8%AA%BF%E3%81%B9%E3%81%A6%E3%81%BF%E3%81%9F/'>
 <meta property='og:site_name' content='ストックバック'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='openai' /><meta property='article:tag' content='api' /><meta property='article:tag' content='chatGPT' /><meta property='article:tag' content='function_call' /><meta property='article:published_time' content='2023-06-18T10:55:44&#43;09:00'/><meta property='article:modified_time' content='2023-06-18T10:55:44&#43;09:00'/>
-<meta name="twitter:title" content="function_call APIのパラメータタイプについて調べてみた">
-<meta name="twitter:description" content="OpenAIのAPIで、fucntion_callが発表されました。 英語が苦手なのでドキュメントを読んでも手探り状態です。 一番悩んだのがfu">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='openai' /><meta property='article:tag' content='api' /><meta property='article:tag' content='chatGPT' /><meta property='article:tag' content='function_call' /><meta property='article:published_time' content='2023-06-18T11:37:07&#43;09:00'/><meta property='article:modified_time' content='2023-06-18T11:37:07&#43;09:00'/>
+<meta name="twitter:title" content="function_call APIのパラメータタイプについて、もっと調べてみた">
+<meta name="twitter:description" content="OpenAIのAI、function_callのパラメータについて、もうちょっと調べてみました。 試してみた結果、type以外の細かいことは、">
       
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRE1R3E9XM"></script>
 <script>
@@ -292,7 +292,7 @@ if (!doNotTrack) {
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="https://route250.github.io/p/function_call-api%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%BF%E3%81%B9%E3%81%A6%E3%81%BF%E3%81%9F/">function_call APIのパラメータタイプについて調べてみた</a>
+            <a href="https://route250.github.io/p/function_call-api%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%82%82%E3%81%A3%E3%81%A8%E8%AA%BF%E3%81%B9%E3%81%A6%E3%81%BF%E3%81%9F/">function_call APIのパラメータタイプについて、もっと調べてみた</a>
         </h2>
     
         
@@ -344,41 +344,33 @@ if (!doNotTrack) {
     <section class="article-content">
     
     
-    <p>OpenAIのAPIで、fucntion_callが発表されました。
-英語が苦手なのでドキュメントを読んでも手探り状態です。
-一番悩んだのがfunctionの引数の指定の仕方です。
-JSON Schemaで指定するらしいんですけど？
+    <p>OpenAIのAI、function_callのパラメータについて、もうちょっと調べてみました。<br>
+試してみた結果、type以外の細かいことは、descriptionに書けということです。</p>
+<p>JSONスキーマっての見たら、もうちょっと細かい指定ができるんではないか？と思って、
 <a class="link" href="https://json-schema.org/"  target="_blank" rel="noopener"
     >https://json-schema.org/</a></p>
-<p>実際にどうなるか、テストコードで調べて見ました。
-結果から推測するには、typeに指定できるのは下記っぽい</p>
-<ul>
-<li>string</li>
-<li>number</li>
-<li>integer</li>
-<li>boolean</li>
-<li>object</li>
-</ul>
-<p>うーん？ スキーマとしては配列もいけそうな気がしたのだが・・・・</p>
-<p>テスト用コードです</p>
+<p>まずは、minLengthとmaxLengthを試してみた。
+[https://json-schema.org/understanding-json-schema/reference/string.html#id5]</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python:test.py" data-lang="python:test.py"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">openai</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">submit</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">messages</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&#34;role&#34;</span><span class="p">:</span> <span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;content&#34;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;mesg&#34;</span><span class="p">]}]</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">submit</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">messages</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&#34;role&#34;</span><span class="p">:</span> <span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;content&#34;</span><span class="p">:</span> <span class="s2">&#34;test the sample_function&#34;</span><span class="p">}]</span>
 </span></span><span class="line"><span class="cl">    <span class="n">functions</span> <span class="o">=</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;func_name&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;description&#34;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;func_description&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;sample_function&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;test for parameters&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="s2">&#34;parameters&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="s2">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;object&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                <span class="s2">&#34;properties&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">data</span><span class="p">[</span><span class="s2">&#34;prop_name&#34;</span><span class="p">]:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                        <span class="s2">&#34;type&#34;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;prop_type&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                        <span class="s2">&#34;description&#34;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;prop_descriptoin&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;arg1&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="s2">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;string&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="s2">&#34;minLength&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="s2">&#34;maxLength&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="s2">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;string data&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">                <span class="p">},</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;required&#34;</span><span class="p">:</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&#34;required&#34;</span><span class="p">]],</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;required&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;arg1&#34;</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">            <span class="p">},</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">]</span>
@@ -389,50 +381,163 @@ JSON Schemaで指定するらしいんですけど？
 </span></span><span class="line"><span class="cl">            <span class="n">functions</span><span class="o">=</span><span class="n">functions</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="n">function_call</span><span class="o">=</span><span class="s2">&#34;auto&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">        <span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">#print( response )</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ex</span><span class="o">.</span><span class="n">args</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="o">=</span><span class="p">{}</span>
-</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="p">[</span><span class="s2">&#34;mesg&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="p">[</span><span class="s2">&#34;func_name&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="p">[</span><span class="s2">&#34;func_description&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;c&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="p">[</span><span class="s2">&#34;prop_name&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;d&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="p">[</span><span class="s2">&#34;prop_type&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;string&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="p">[</span><span class="s2">&#34;prop_descriptoin&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="p">[</span><span class="s2">&#34;required&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;f&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">submit</span><span class="p">()</span>
+</span></span></code></pre></div><p>実行結果</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ python3 test.py 
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;finish_reason&#34;: &#34;function_call&#34;,
+</span></span><span class="line"><span class="cl">  &#34;index&#34;: 0,
+</span></span><span class="line"><span class="cl">  &#34;message&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;content&#34;: null,
+</span></span><span class="line"><span class="cl">    &#34;function_call&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;arguments&#34;: &#34;{\n  \&#34;arg1\&#34;: \&#34;Hello World\&#34;\n}&#34;,
+</span></span><span class="line"><span class="cl">      &#34;name&#34;: &#34;sample_function&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;role&#34;: &#34;assistant&#34;
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>minLengthとmaxLengthはあっさり無視されるらしい。</p>
+<p>次は、[https://json-schema.org/understanding-json-schema/reference/string.html#id6](Regular Expressions)<br>
+これが使えたら、結構うれしいんじゃないか？</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">                &#34;properties&#34;: {
+</span></span><span class="line"><span class="cl">                    &#34;arg1&#34;: {
+</span></span><span class="line"><span class="cl">                        &#34;type&#34;: &#34;string&#34;,
+</span></span><span class="line"><span class="cl">                        &#34;pattern&#34;: &#34;^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$&#34;,
+</span></span><span class="line"><span class="cl">                        &#34;description&#34;: &#34;string data&#34;,
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                },
+</span></span></code></pre></div><p>実行結果</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ python3 test.py 
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;finish_reason&#34;: &#34;function_call&#34;,
+</span></span><span class="line"><span class="cl">  &#34;index&#34;: 0,
+</span></span><span class="line"><span class="cl">  &#34;message&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;content&#34;: null,
+</span></span><span class="line"><span class="cl">    &#34;function_call&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;arguments&#34;: &#34;{\n  \&#34;arg1\&#34;: \&#34;Hello World\&#34;\n}&#34;,
+</span></span><span class="line"><span class="cl">      &#34;name&#34;: &#34;sample_function&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;role&#34;: &#34;assistant&#34;
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>やっぱり無視されました。ですよね〜〜〜〜。</p>
+<p>もしかして type に numberを指定しても無視するんじゃないか？　　
+と思って</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import openai
+</span></span><span class="line"><span class="cl">import json
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span> <span class="s2">&#34;</span><span class="si">{:16s}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&#34;type&#34;</span><span class="p">,</span><span class="s2">&#34;output&#34;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;askdfja&#39;</span><span class="p">,</span><span class="s1">&#39;string&#39;</span><span class="p">,</span><span class="s1">&#39;String&#39;</span><span class="p">,</span><span class="s1">&#39;integer&#39;</span><span class="p">,</span><span class="s1">&#39;number&#39;</span><span class="p">,</span><span class="s1">&#39;number[]&#39;</span><span class="p">,</span><span class="s1">&#39;float&#39;</span><span class="p">,</span><span class="s1">&#39;float</span><span class="si">{}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;[]&#39;</span><span class="p">,</span><span class="s1">&#39;double&#39;</span><span class="p">,</span><span class="s1">&#39;bool&#39;</span><span class="p">,</span><span class="s1">&#39;boolean&#39;</span><span class="p">,</span><span class="s1">&#39;dictionary&#39;</span><span class="p">,</span><span class="s1">&#39;array&#39;</span><span class="p">,</span><span class="s1">&#39;array of string&#39;</span><span class="p">,</span><span class="s1">&#39;object&#39;</span><span class="p">,</span><span class="s1">&#39;オブジェクト&#39;</span><span class="p">,</span><span class="s1">&#39;文字列&#39;</span><span class="p">,</span><span class="s1">&#39;文字&#39;</span><span class="p">,</span><span class="s1">&#39;{&#34;aaa&#34;:&#34;bbb&#34;}&#39;</span><span class="p">,</span><span class="s1">&#39;[string]&#39;</span><span class="p">,</span><span class="s1">&#39;string,number,boolean&#39;</span><span class="p">]:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">data</span><span class="p">[</span><span class="s2">&#34;prop_type&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span> <span class="s2">&#34;</span><span class="si">{:16s}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">submit</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
-</span></span></code></pre></div><p>実行結果、こうなりましたよ</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">type             output
-</span></span><span class="line"><span class="cl">askdfja          (&#34;Invalid schema for function &#39;b&#39;: &#39;askdfja&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">string           Hello! How can I assist you today?
-</span></span><span class="line"><span class="cl">String           (&#34;Invalid schema for function &#39;b&#39;: &#39;String&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">integer          Hi, how can I assist you today?
-</span></span><span class="line"><span class="cl">number           Hello! How can I assist you today?
-</span></span><span class="line"><span class="cl">number[]         (&#34;Invalid schema for function &#39;b&#39;: &#39;number[]&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">float            (&#34;Invalid schema for function &#39;b&#39;: &#39;float&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">float{}          (&#34;Invalid schema for function &#39;b&#39;: &#39;float{}&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">{}               (&#34;Invalid schema for function &#39;b&#39;: &#39;{}&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">[]               (&#34;Invalid schema for function &#39;b&#39;: &#39;[]&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">double           (&#34;Invalid schema for function &#39;b&#39;: &#39;double&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">bool             (&#34;Invalid schema for function &#39;b&#39;: &#39;bool&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">boolean          Hi there! How can I assist you today?
-</span></span><span class="line"><span class="cl">dictionary       (&#34;Invalid schema for function &#39;b&#39;: &#39;dictionary&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">array            ([&#34;Invalid schema for function &#39;b&#39;: In context=(&#39;properties&#39;, &#39;d&#39;), array schema missing items&#34;],)
-</span></span><span class="line"><span class="cl">array of string  (&#34;Invalid schema for function &#39;b&#39;: &#39;array of string&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">object           Hello! How can I assist you today?
-</span></span><span class="line"><span class="cl">オブジェクト           (&#34;Invalid schema for function &#39;b&#39;: &#39;オブジェクト&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">文字列              (&#34;Invalid schema for function &#39;b&#39;: &#39;文字列&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">文字               (&#34;Invalid schema for function &#39;b&#39;: &#39;文字&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">{&#34;aaa&#34;:&#34;bbb&#34;}    (&#39;Invalid schema for function \&#39;b\&#39;: \&#39;{&#34;aaa&#34;:&#34;bbb&#34;}\&#39; is not valid under any of the given schemas&#39;,)
-</span></span><span class="line"><span class="cl">[string]         (&#34;Invalid schema for function &#39;b&#39;: &#39;[string]&#39; is not valid under any of the given schemas&#34;,)
-</span></span><span class="line"><span class="cl">string,number,boolean (&#34;Invalid schema for function &#39;b&#39;: &#39;string,number,boolean&#39; is not valid under any of the given schemas&#34;,)
-</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl">def submit():
+</span></span><span class="line"><span class="cl">    messages = [{&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: &#34;generate test data for sample_function. and test it.&#34;}]
+</span></span><span class="line"><span class="cl">    functions = [
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;name&#34;: &#34;sample_function&#34;,
+</span></span><span class="line"><span class="cl">            &#34;description&#34;: &#34;test for parameters&#34;,
+</span></span><span class="line"><span class="cl">            &#34;parameters&#34;: {
+</span></span><span class="line"><span class="cl">                &#34;type&#34;: &#34;object&#34;,
+</span></span><span class="line"><span class="cl">                &#34;properties&#34;: {
+</span></span><span class="line"><span class="cl">                    &#34;arg1&#34;: {
+</span></span><span class="line"><span class="cl">                        &#34;type&#34;: &#34;number&#34;,
+</span></span><span class="line"><span class="cl">                        &#34;description&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                },
+</span></span><span class="line"><span class="cl">                &#34;required&#34;: [&#34;arg1&#34;],
+</span></span><span class="line"><span class="cl">            },
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    ]
+</span></span><span class="line"><span class="cl">    try:
+</span></span><span class="line"><span class="cl">        response = openai.ChatCompletion.create(
+</span></span><span class="line"><span class="cl">            model=&#34;gpt-3.5-turbo-0613&#34;,
+</span></span><span class="line"><span class="cl">            messages=messages,
+</span></span><span class="line"><span class="cl">            functions=functions,
+</span></span><span class="line"><span class="cl">            function_call=&#34;auto&#34;,
+</span></span><span class="line"><span class="cl">        )
+</span></span><span class="line"><span class="cl">        print( response.choices[0] )
+</span></span><span class="line"><span class="cl">    except Exception as ex:
+</span></span><span class="line"><span class="cl">        return ex.args
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">submit()
+</span></span></code></pre></div><p>実行結果</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s2">&#34;finish_reason&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;stop&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s2">&#34;index&#34;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s2">&#34;message&#34;</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;content&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;To generate test data for `sample_function`, I need to know the expected output or the desired behavior of the function. Please provide more information about the expected behavior, any constraints on the input, and the desired output format.&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;role&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;assistant&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">}</span><span class="w">
+</span></span></span></code></pre></div><p>うーむ。functoinの仕様を明確にしろってか？？？
+なら、これでどうだ？</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">            &#34;name&#34;: &#34;sample_function&#34;,
+</span></span><span class="line"><span class="cl">            &#34;description&#34;: &#34;return tha input data, just sample&#34;,
+</span></span><span class="line"><span class="cl">            &#34;parameters&#34;: {
+</span></span><span class="line"><span class="cl">                &#34;type&#34;: &#34;object&#34;,
+</span></span><span class="line"><span class="cl">                &#34;properties&#34;: {
+</span></span><span class="line"><span class="cl">                    &#34;arg1&#34;: {
+</span></span><span class="line"><span class="cl">                        &#34;type&#34;: &#34;number&#34;,
+</span></span><span class="line"><span class="cl">                        &#34;description&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">                    }
+</span></span><span class="line"><span class="cl">                },
+</span></span><span class="line"><span class="cl">                &#34;required&#34;: [&#34;arg1&#34;],
+</span></span><span class="line"><span class="cl">            },
+</span></span></code></pre></div><p>実行結果</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;finish_reason&#34;: &#34;function_call&#34;,
+</span></span><span class="line"><span class="cl">  &#34;index&#34;: 0,
+</span></span><span class="line"><span class="cl">  &#34;message&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;content&#34;: null,
+</span></span><span class="line"><span class="cl">    &#34;function_call&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;arguments&#34;: &#34;{\n  \&#34;arg1\&#34;: 5\n}&#34;,
+</span></span><span class="line"><span class="cl">      &#34;name&#34;: &#34;sample_function&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;role&#34;: &#34;assistant&#34;
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>おお！ 数字ってのは守ってくれるらしい。<br>
+じゃあ、範囲指定はどうか？</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">                    &#34;arg1&#34;: {
+</span></span><span class="line"><span class="cl">                        &#34;type&#34;: &#34;number&#34;,
+</span></span><span class="line"><span class="cl">                        &#34;minimum&#34;: 100,
+</span></span><span class="line"><span class="cl">                        &#34;maximum&#34;: 200,
+</span></span><span class="line"><span class="cl">                        &#34;description&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">                    }
+</span></span></code></pre></div><p>実行結果</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;finish_reason&#34;: &#34;function_call&#34;,
+</span></span><span class="line"><span class="cl">  &#34;index&#34;: 0,
+</span></span><span class="line"><span class="cl">  &#34;message&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;content&#34;: null,
+</span></span><span class="line"><span class="cl">    &#34;function_call&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;arguments&#34;: &#34;{\n  \&#34;arg1\&#34;: 10\n}&#34;,
+</span></span><span class="line"><span class="cl">      &#34;name&#34;: &#34;sample_function&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;role&#34;: &#34;assistant&#34;
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>うむ、やっぱり範囲指定は無視するらしい。<br>
+つまり以下のようにdescriptionに書けば・・・・</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">                    &#34;arg1&#34;: {
+</span></span><span class="line"><span class="cl">                        &#34;type&#34;: &#34;number&#34;,
+</span></span><span class="line"><span class="cl">                        &#34;description&#34;: &#34;range 100 to 200&#34;,
+</span></span><span class="line"><span class="cl">                    }
+</span></span></code></pre></div><p>実行結果</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;finish_reason&#34;: &#34;function_call&#34;,
+</span></span><span class="line"><span class="cl">  &#34;index&#34;: 0,
+</span></span><span class="line"><span class="cl">  &#34;message&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;content&#34;: null,
+</span></span><span class="line"><span class="cl">    &#34;function_call&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;arguments&#34;: &#34;{\n  \&#34;arg1\&#34;: 150\n}&#34;,
+</span></span><span class="line"><span class="cl">      &#34;name&#34;: &#34;sample_function&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;role&#34;: &#34;assistant&#34;
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>ちゃんと守ってくれるらしい。</p>
+
 </section>
 
 
@@ -480,12 +585,12 @@ JSON Schemaで指定するらしいんですけど？
             
                 
 <article class="">
-    <a href="https://route250.github.io/p/function_call-api%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%82%82%E3%81%A3%E3%81%A8%E8%AA%BF%E3%81%B9%E3%81%A6%E3%81%BF%E3%81%9F/">
+    <a href="https://route250.github.io/p/function_call-api%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%BF%E3%81%B9%E3%81%A6%E3%81%BF%E3%81%9F/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">function_call APIのパラメータタイプについて、もっと調べてみた</h2>
+            <h2 class="article-title">function_call APIのパラメータタイプについて調べてみた</h2>
         </div>
     </a>
 </article>
