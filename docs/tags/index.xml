@@ -5,8 +5,40 @@
         <link>https://route250.github.io/tags/</link>
         <description>Recent content in Tags on ストックバック</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>ja-jp</language>
-        <lastBuildDate>Fri, 14 Apr 2023 23:30:14 +0900</lastBuildDate><atom:link href="https://route250.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>ja</language>
+        <lastBuildDate>Sun, 18 Jun 2023 10:55:44 +0900</lastBuildDate><atom:link href="https://route250.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>api</title>
+        <link>https://route250.github.io/tags/api/</link>
+        <pubDate>Sun, 18 Jun 2023 10:55:44 +0900</pubDate>
+        
+        <guid>https://route250.github.io/tags/api/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>chatGPT</title>
+        <link>https://route250.github.io/tags/chatgpt/</link>
+        <pubDate>Sun, 18 Jun 2023 10:55:44 +0900</pubDate>
+        
+        <guid>https://route250.github.io/tags/chatgpt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>function_call</title>
+        <link>https://route250.github.io/tags/function_call/</link>
+        <pubDate>Sun, 18 Jun 2023 10:55:44 +0900</pubDate>
+        
+        <guid>https://route250.github.io/tags/function_call/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>openai</title>
+        <link>https://route250.github.io/tags/openai/</link>
+        <pubDate>Sun, 18 Jun 2023 10:55:44 +0900</pubDate>
+        
+        <guid>https://route250.github.io/tags/openai/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>command</title>
         <link>https://route250.github.io/tags/command/</link>
         <pubDate>Fri, 14 Apr 2023 23:30:14 +0900</pubDate>

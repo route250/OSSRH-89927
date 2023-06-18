@@ -5,8 +5,24 @@
         <link>https://route250.github.io/categories/</link>
         <description>Recent content in Categories on ストックバック</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>ja-jp</language>
-        <lastBuildDate>Fri, 21 Apr 2023 02:12:20 +0900</lastBuildDate><atom:link href="https://route250.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>ja</language>
+        <lastBuildDate>Sun, 18 Jun 2023 10:55:44 +0900</lastBuildDate><atom:link href="https://route250.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OpenAI</title>
+        <link>https://route250.github.io/categories/openai/</link>
+        <pubDate>Sun, 18 Jun 2023 10:55:44 +0900</pubDate>
+        
+        <guid>https://route250.github.io/categories/openai/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://route250.github.io/categories/python/</link>
+        <pubDate>Sun, 18 Jun 2023 10:55:44 +0900</pubDate>
+        
+        <guid>https://route250.github.io/categories/python/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>javascript</title>
         <link>https://route250.github.io/categories/javascript/</link>
         <pubDate>Fri, 21 Apr 2023 02:12:20 +0900</pubDate>
